@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="查看溯光圖書館的活動花絮、閱讀推廣資訊及好書推介。"
+  >
+  <title>最新消息｜溯光圖書館</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <div id="header-placeholder"></div>
+
+  <main id="main-content">
+    <section class="page-banner" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">Library News</p>
+        <h1 id="page-title">最新消息</h1>
+        <p>記錄閱讀時光，分享活動點滴，發現值得一讀的好書。</p>
+      </div>
+    </section>
+
+    <section class="section news-tabs-section" aria-label="最新消息分類">
+      <div class="container">
+        <div class="tab-list" role="tablist" aria-label="消息分類">
+          <button
+            id="activities-tab"
+            class="tab-button is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="activities-panel"
+            tabindex="0"
+          >
+            活動花絮
+          </button>
+
+          <button
+            id="books-tab"
+            class="tab-button"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="books-panel"
+            tabindex="-1"
+          >
+            好書推介
+          </button>
+        </div>
+
+        <section
+          id="activities-panel"
+          class="tab-panel is-active"
+          role="tabpanel"
+          aria-labelledby="activities-tab"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Event Highlights</p>
+              <h2>活動花絮</h2>
+            </div>
+          </div>
+
+          <div class="news-list">
+            <article class="news-item">
+              <div class="news-image-placeholder" aria-hidden="true">
+                <span>
+                  <img src="images/閱讀小宇宙-front.jpg" alt="故事時間活動現場" />
+                </span>
+              </div>
+
+              <div class="news-item-content">
+                <time datetime="2026-09-15">2026年9月15日</time>
+                <h3>「閱讀小宇宙」新學年閱讀啟動禮</h3>
+                <p>
+                  新學年第一個閱讀活動圓滿舉行。同學透過故事分享、主題書展和小遊戲，
+                  認識圖書館的閱讀資源，並訂下自己的閱讀小目標。
+                </p>
+                <a href="#" class="text-link gallery-trigger" data-gallery="reading-universe">查看活動相片</a>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <div class="news-image-placeholder" aria-hidden="true">
+                <span>
+                  <img src="images/親子共讀工作坊-2.png" alt="故事時間活動現場" />
+                </span>
+              </div>
+
+              <div class="news-item-content">
+                <time datetime="2026-08-28">2026年8月28日</time>
+                <h3>親子共讀工作坊：一起把故事讀出來</h3>
+                <p>
+                  家長與孩子一起閱讀繪本，學習以提問、觀察圖像和角色扮演方式，
+                  讓共讀時光變得更有趣、更有互動。
+                </p>
+                <a href="#" class="text-link gallery-trigger" data-gallery="family-reading-workshop">查看活動相片</a>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <div class="news-image-placeholder" aria-hidden="true">
+                <span>
+                  <img src="images/暑期閱讀挑戰-1.png" alt="故事時間活動現場" />
+                </span>
+              </div>
+
+              <div class="news-item-content">
+                <time datetime="2026-07-10">2026年7月10日</time>
+                <h3>暑期閱讀挑戰：完成任務，收集閱讀之光</h3>
+                <p>
+                  同學完成指定閱讀任務後，可獲得「閱讀之光」貼紙，
+                  鼓勵大家在假期保持閱讀習慣。
+                </p>
+                <a href="#" class="text-link gallery-trigger" data-gallery="summer-reading-challenge">查看活動相片</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="books-panel"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="books-tab"
+          hidden
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Book Recommendations</p>
+              <h2>好書推介</h2>
+            </div>
+          </div>
+
+          <div class="card-grid three-columns">
+            <article class="book-card">
+              <div class="book-cover-placeholder" aria-hidden="true">
+                <span>
+                  <img src="images/情緒小怪獸.png" alt="故事時間活動現場" style="height: 245px;" />
+                </span>
+              </div>
+
+              <div class="card-content">
+                <span class="book-category">情緒學習</span>
+                <h3>《情緒小怪獸》</h3>
+                <p>以色彩和圖像認識不同情緒，幫助孩子用簡單語言表達內心感受。</p>
+                <p class="book-meta">適合對象：初小至高小學生</p>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="book-cover-placeholder" aria-hidden="true">
+                <span>
+                  <img src="images/了不起的我.jpeg" alt="故事時間活動現場" style="height: 245px;" />
+                </span>
+              </div>
+
+              <div class="card-content">
+                <span class="book-category">生活自理</span>
+                <h3>《了不起的我》</h3>
+                <p>從日常生活小事出發，陪伴孩子建立自理能力和自信心。</p>
+                <p class="book-meta">適合對象：初小學生</p>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <div class="book-cover-placeholder" aria-hidden="true">
+                <span>
+                  <img src="images/親子共讀起步走.jpeg" alt="故事時間活動現場" style="height: 245px;" />
+                </span>
+              </div>
+
+              <div class="card-content">
+                <span class="book-category">親子共讀</span>
+                <h3>《新子共讀起步走》</h3>
+                <p>透過溫柔的故事，引導親子一起談談每天遇到的心情與小事情。</p>
+                <p class="book-meta">適合對象：親子共讀</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="gallery-modal" class="gallery-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="活動相片檢視">
+    <div class="gallery-backdrop"></div>
+    <div class="gallery-frame" role="document">
+      <button type="button" class="gallery-close" aria-label="關閉相片檢視">×</button>
+
+      <div class="gallery-content">
+        <div class="gallery-slide">
+          <img src="" alt="" class="gallery-image" />
+        </div>
+
+        <div class="gallery-info">
+          <p class="gallery-counter"></p>
+          <p class="gallery-caption"></p>
+        </div>
+
+        <div class="gallery-actions">
+          <button type="button" class="gallery-prev">上一張</button>
+          <button type="button" class="gallery-next">下一張</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>

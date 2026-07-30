@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="使用溯光圖書館預約服務，申請與圖書館老師會面。"
+  >
+  <title>預約服務｜溯光圖書館</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <div id="header-placeholder"></div>
+
+  <main id="main-content">
+    <section class="page-banner" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">Reservation Service</p>
+        <h1 id="page-title">預約服務</h1>
+        <p>歡迎預約與圖書館老師會面，一起討論閱讀、學習或圖書館服務需要。</p>
+      </div>
+    </section>
+
+    <section class="section reservation-section">
+      <div class="container two-column-layout">
+        <aside class="reservation-info" aria-labelledby="reservation-info-title">
+          <p class="eyebrow">Before You Book</p>
+          <h2 id="reservation-info-title">預約提示</h2>
+
+          <ul class="feature-list">
+            <li>請最少於兩個工作天前提交申請。</li>
+            <li>提交申請後，圖書館老師會以電話或電郵確認會面時間。</li>
+            <li>如需取消或更改預約，請盡早聯絡我們。</li>
+            <li>此頁面目前只作前端示範，資料不會真正送出。</li>
+          </ul>
+
+          <div class="contact-box">
+            <h3>需要協助？</h3>
+            <p>電話：<a href="tel:+85226001234">2600 1234</a></p>
+            <p>電郵：<a href="mailto:library@tracinglight.edu.hk">library@tracinglight.edu.hk</a></p>
+          </div>
+        </aside>
+
+        <div class="reservation-form-wrapper">
+          <form id="reservation-form" class="reservation-form" action="#" method="post">
+            <fieldset>
+              <legend>預約資料</legend>
+
+              <div class="form-group">
+                <label for="name">姓名 <span aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="identity">身份 <span aria-hidden="true">*</span></label>
+                <select id="identity" name="identity" required>
+                  <option value="">請選擇身份</option>
+                  <option value="student">學生</option>
+                  <option value="parent">家長</option>
+                  <option value="staff">教職員</option>
+                  <option value="other">其他</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-method">聯絡方式 <span aria-hidden="true">*</span></label>
+                <input
+                  id="contact-method"
+                  name="contact-method"
+                  type="text"
+                  placeholder="請填寫電話號碼或電郵地址"
+                  required
+                >
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="student-name">學生姓名 <span class="optional">（如適用）</span></label>
+                  <input id="student-name" name="student-name" type="text">
+                </div>
+
+                <div class="form-group">
+                  <label for="student-class">班別 <span class="optional">（如適用）</span></label>
+                  <input id="student-class" name="student-class" type="text" placeholder="例如：3A">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="reservation-date">首選日期 <span aria-hidden="true">*</span></label>
+                  <input id="reservation-date" name="reservation-date" type="date" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="reservation-time">首選時段 <span aria-hidden="true">*</span></label>
+                  <select id="reservation-time" name="reservation-time" required>
+                    <option value="">請選擇時段</option>
+                    <option value="morning">上午 09:00–10:00</option>
+                    <option value="late-morning">上午 10:30–11:30</option>
+                    <option value="afternoon">下午 14:00–15:00</option>
+                    <option value="late-afternoon">下午 15:30–16:30</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="meeting-topic">會面主題 <span aria-hidden="true">*</span></label>
+                <select id="meeting-topic" name="meeting-topic" required>
+                  <option value="">請選擇會面主題</option>
+                  <option value="reading-support">閱讀支援</option>
+                  <option value="book-recommendation">圖書推介</option>
+                  <option value="learning-resources">學習資源</option>
+                  <option value="library-service">圖書館服務</option>
+                  <option value="other">其他</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">備註／想討論的事項</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="請簡單說明你的需要或想討論的內容。"
+                ></textarea>
+              </div>
+
+              <p class="required-note"><span aria-hidden="true">*</span> 必填欄位</p>
+
+              <button class="button button-primary" type="submit">提交預約申請</button>
+            </fieldset>
+          </form>
+
+          <div
+            id="form-success-message"
+            class="form-success-message"
+            role="status"
+            aria-live="polite"
+            hidden
+          >
+            <h2>已收到你的預約申請！</h2>
+            <p>感謝你的填寫。圖書館老師會盡快以你提供的聯絡方式回覆。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>
